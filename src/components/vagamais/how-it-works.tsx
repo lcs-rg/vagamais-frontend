@@ -6,22 +6,26 @@ const steps = [
   {
     icon: FileText,
     title: "Importe a vaga",
-    description: "Cole o link ou faça upload da descrição da vaga que te interessa.",
+    description:
+      "Cole o link ou faça upload da descrição da vaga que te interessa.",
   },
   {
     icon: Brain,
     title: "IA analisa",
-    description: "Nossa IA compara a vaga com seu perfil, destacando compatibilidades e gaps.",
+    description:
+      "Nossa IA compara a vaga com seu perfil, destacando compatibilidades e gaps.",
   },
   {
     icon: Target,
     title: "Match Score",
-    description: "Receba uma nota de 0 a 100 mostrando o quanto você combina com a vaga.",
+    description:
+      "Receba uma nota de 0 a 100 mostrando o quanto você combina com a vaga.",
   },
   {
     icon: Zap,
     title: "Candidatura certeira",
-    description: "Com os insights da IA, adapte seu currículo e se candidate com confiança.",
+    description:
+      "Com os insights da IA, adapte seu currículo e se candidate com confiança.",
   },
 ]
 
@@ -31,7 +35,7 @@ export function HowItWorksSection() {
       <div className="mx-auto max-w-2xl text-center">
         <span
           className={cn(
-            "inline-flex items-center rounded-full border bg-white/70 px-2.5 py-1 text-xs font-medium shadow-sm",
+            "inline-flex items-center rounded-full border border-sky-200/60 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm",
             "text-sky-600",
           )}
         >
@@ -41,7 +45,8 @@ export function HowItWorksSection() {
           Do link da vaga ao match em segundos
         </h2>
         <p className="mt-2 text-muted-foreground">
-          Quatro passos simples para transformar sua busca por vagas com o poder da IA.
+          Quatro passos simples para transformar sua busca por vagas com o poder
+          da IA.
         </p>
       </div>
 
@@ -49,12 +54,15 @@ export function HowItWorksSection() {
         {steps.map((step, i) => (
           <div
             key={step.title}
-            className="relative rounded-2xl border bg-white p-6 shadow-sm"
+            className={cn(
+              "group relative rounded-2xl border border-sky-100/80 bg-white p-6 shadow-md transition-all duration-300",
+              "hover:shadow-lg hover:-translate-y-1",
+            )}
           >
-            <div className="flex size-8 items-center justify-center rounded-full bg-sky-50 text-xs font-semibold text-sky-500">
+            <div className="flex size-8 items-center justify-center rounded-full bg-sky-500 text-xs font-semibold text-white shadow-sm">
               {i + 1}
             </div>
-            <div className="mt-4 flex size-10 items-center justify-center rounded-lg bg-sky-50 text-sky-500">
+            <div className="mt-4 flex size-10 items-center justify-center rounded-lg bg-sky-100/70 text-sky-500 ring-1 ring-sky-200/50">
               <step.icon className="size-5" />
             </div>
             <h3 className="mt-4 text-base font-semibold">{step.title}</h3>
@@ -69,8 +77,8 @@ export function HowItWorksSection() {
         <Link
           href="#features"
           className={cn(
-            "inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-medium",
-            "border-foreground/10 bg-white/80 backdrop-blur hover:bg-muted",
+            "inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-medium transition-all",
+            "border-sky-200/60 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-300",
           )}
         >
           Ver todas as funcionalidades

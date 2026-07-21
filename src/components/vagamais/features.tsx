@@ -29,7 +29,7 @@ export function FeaturesSection() {
       <div className="mx-auto max-w-2xl text-center">
         <span
           className={cn(
-            "inline-flex items-center rounded-full border bg-white/70 px-2.5 py-1 text-xs font-medium shadow-sm",
+            "inline-flex items-center rounded-full border border-sky-200/60 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm",
             "text-sky-600",
           )}
         >
@@ -39,7 +39,8 @@ export function FeaturesSection() {
           Encontre a vaga ideal com inteligência artificial
         </h2>
         <p className="mt-2 text-muted-foreground">
-          Chega de candidaturas no escuro. O Vaga+ analisa cada oportunidade e te mostra onde você tem mais chances.
+          Chega de candidaturas no escuro. O Vaga+ analisa cada oportunidade e
+          te mostra onde você tem mais chances.
         </p>
       </div>
 
@@ -47,9 +48,12 @@ export function FeaturesSection() {
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            className={cn(
+              "group rounded-2xl border border-sky-100/80 bg-white p-6 shadow-md transition-all duration-300",
+              "hover:shadow-lg hover:-translate-y-1",
+            )}
           >
-            <div className="flex size-10 items-center justify-center rounded-lg bg-sky-50 text-sky-500">
+            <div className="flex size-10 items-center justify-center rounded-lg bg-sky-100/70 text-sky-500 ring-1 ring-sky-200/50">
               <feature.icon className="size-5" />
             </div>
             <h3 className="mt-4 text-base font-semibold">{feature.title}</h3>
@@ -64,9 +68,10 @@ export function FeaturesSection() {
         <Link
           href="/cadastro"
           className={cn(
-            "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium",
-            "bg-neutral-900 hover:bg-neutral-800 text-white shadow",
+            "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition-all",
+            "bg-neutral-900 hover:bg-neutral-800 text-white shadow-md",
             "shadow-[inset_0_1px_0_rgba(255,255,255,.15)]",
+            "hover:-translate-y-0.5",
           )}
         >
           Experimente grátis
