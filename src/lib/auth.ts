@@ -40,7 +40,7 @@ function clearAuthStorage(): void {
   removeCookie("access_token")
 }
 
-export async function register(data: RegisterRequest): Promise<AuthResponse> {
+export async function register(data: RegisterRequest): Promise<{ message: string }> {
   const res = await fetch(`${AUTH_URL}/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -52,8 +52,7 @@ export async function register(data: RegisterRequest): Promise<AuthResponse> {
     throw new Error(err.message || "Erro ao cadastrar")
   }
 
-  const authRes: AuthResponse = await res.json()
-  return authRes
+  return res.json()
 }
 
 export async function login(data: LoginRequest): Promise<AuthResponse> {
