@@ -17,7 +17,7 @@ export function Navbar() {
         aria-label="Primary"
       >
         <div className="flex items-center gap-2">
-          <div className="grid h-7 w-7 place-items-center rounded-full bg-sky-500 text-white text-xs font-semibold">
+          <div className="grid h-7 w-7 place-items-center rounded-full bg-teal-500 text-white text-xs font-semibold">
             {"✺"}
           </div>
           <span className="font-semibold">Vaga+</span>

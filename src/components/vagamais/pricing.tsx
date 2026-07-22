@@ -39,7 +39,7 @@ function Plan({
   highlight?: boolean
 }) {
   return (
-    <Card className={highlight ? "border-sky-300" : ""}>
+    <Card className={highlight ? "border-teal-300" : ""}>
       <CardHeader>
         <CardTitle className="flex items-baseline justify-between">
           <span>{title}</span>

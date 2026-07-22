@@ -13,7 +13,7 @@ export function Hero() {
         style={{
           backgroundImage: `
             radial-gradient(1200px 500px at 50% -10%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%),
-            linear-gradient(180deg, #e0f0ff 0%, #d4edfc 45%, #cde8fb 100%)
+            linear-gradient(180deg, #d4f4ea 0%, #c8f0e0 45%, #bfebd8 100%)
           `,
         }}
       />

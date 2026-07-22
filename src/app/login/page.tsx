@@ -34,13 +34,13 @@ export default function LoginPage() {
 
   return (
     <div className="relative flex min-h-screen items-center justify-center">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-sky-50 via-sky-50/60 to-cyan-50" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-50 via-teal-50/60 to-emerald-50" />
 
       <div className="mx-auto w-full max-w-md px-4 py-16">
         <div className="rounded-2xl border bg-white p-8 shadow-sm">
           <div className="mb-6 flex justify-center">
             <Link href="/" className="flex items-center gap-2">
-              <span className="flex size-7 items-center justify-center rounded-full bg-sky-500 text-xs font-bold text-white">
+              <span className="flex size-7 items-center justify-center rounded-full bg-teal-500 text-xs font-bold text-white">
                 ✺
               </span>
               <span className="text-base font-semibold tracking-tight">Vaga+</span>
@@ -156,7 +156,7 @@ export default function LoginPage() {
             Não tem conta?{" "}
             <Link
               href="/cadastro"
-              className="font-medium text-sky-600 hover:text-sky-500"
+              className="font-medium text-teal-600 hover:text-teal-500"
             >
               Cadastre-se
             </Link>
