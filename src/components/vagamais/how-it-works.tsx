@@ -1,89 +1,28 @@
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { FileText, Brain, Zap, Target } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
-const steps = [
-  {
-    icon: FileText,
-    title: "Importe a vaga",
-    description:
-      "Cole o link ou faça upload da descrição da vaga que te interessa.",
-  },
-  {
-    icon: Brain,
-    title: "IA analisa",
-    description:
-      "Nossa IA compara a vaga com seu perfil, destacando compatibilidades e gaps.",
-  },
-  {
-    icon: Target,
-    title: "Match Score",
-    description:
-      "Receba uma nota de 0 a 100 mostrando o quanto você combina com a vaga.",
-  },
-  {
-    icon: Zap,
-    title: "Candidatura certeira",
-    description:
-      "Com os insights da IA, adapte seu currículo e se candidate com confiança.",
-  },
-]
-
-export function HowItWorksSection() {
+export default function HowItWorksSection() {
+  const steps = [
+    { n: 1, title: "Importe a vaga", desc: "Cole o link ou faça upload da descrição da vaga." },
+    { n: 2, title: "IA analisa", desc: "Nossa IA compara a vaga com seu perfil, destacando gaps e forças." },
+    { n: 3, title: "Match Score", desc: "Receba uma nota de 0 a 100 e entenda sua compatibilidade." },
+  ]
   return (
     <section id="how-it-works" className="mx-auto max-w-6xl px-4 py-16">
       <div className="mx-auto max-w-2xl text-center">
-        <span
-          className={cn(
-            "inline-flex items-center rounded-full border border-sky-200/60 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm",
-            "text-sky-600",
-          )}
-        >
-          Como funciona
-        </span>
-        <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-          Do link da vaga ao match em segundos
-        </h2>
-        <p className="mt-2 text-muted-foreground">
-          Quatro passos simples para transformar sua busca por vagas com o poder
-          da IA.
-        </p>
+        <h2 className="text-3xl font-semibold tracking-tight">Como funciona</h2>
+        <p className="mt-2 text-muted-foreground">Três passos simples do link da vaga ao match.</p>
       </div>
-
-      <div className="mt-10 grid gap-4 md:grid-cols-4">
-        {steps.map((step, i) => (
-          <div
-            key={step.title}
-            className={cn(
-              "group relative rounded-2xl border border-sky-100/80 bg-white p-6 shadow-md transition-all duration-300",
-              "hover:shadow-lg hover:-translate-y-1",
-            )}
-          >
-            <div className="flex size-8 items-center justify-center rounded-full bg-sky-500 text-xs font-semibold text-white shadow-sm">
-              {i + 1}
+      <ol className="mx-auto mt-8 grid max-w-3xl gap-4">
+        {steps.map((s) => (
+          <li key={s.n} className="flex items-start gap-3 rounded-2xl border p-4">
+            <Badge className="rounded-full">{s.n}</Badge>
+            <div>
+              <div className="font-medium">{s.title}</div>
+              <p className="text-sm text-muted-foreground">{s.desc}</p>
             </div>
-            <div className="mt-4 flex size-10 items-center justify-center rounded-lg bg-sky-100/70 text-sky-500 ring-1 ring-sky-200/50">
-              <step.icon className="size-5" />
-            </div>
-            <h3 className="mt-4 text-base font-semibold">{step.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {step.description}
-            </p>
-          </div>
+          </li>
         ))}
-      </div>
-
-      <div className="mt-10 flex justify-center">
-        <Link
-          href="#features"
-          className={cn(
-            "inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-medium transition-all",
-            "border-sky-200/60 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-300",
-          )}
-        >
-          Ver todas as funcionalidades
-        </Link>
-      </div>
+      </ol>
     </section>
   )
 }

@@ -1,61 +1,69 @@
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-export function HeroSection() {
+export function Hero() {
   return (
-    <section className="relative mx-auto max-w-6xl px-4 pb-24 pt-24">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-sky-50 via-sky-50/70 to-cyan-50/60" />
-
-      <div className="absolute left-1/2 top-1/4 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-sky-200/25 blur-3xl" />
-
+    <section
+      className={cn("relative mt-6 overflow-hidden rounded-3xl border shadow-sm", "px-6 py-14 sm:py-16 md:py-20")}
+    >
       <div
-        className={cn(
-          "relative mx-auto max-w-3xl rounded-3xl border border-sky-100/80 bg-white/60 p-12 shadow-lg backdrop-blur-sm",
-        )}
-      >
-        <span
-          className={cn(
-            "inline-flex items-center rounded-full border border-sky-200/60 bg-white/80 px-3 py-1 text-xs font-medium shadow-sm",
-            "text-sky-600",
-          )}
-        >
-          ✺ Inteligência artificial para sua carreira
-        </span>
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(1200px 500px at 50% -10%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%),
+            linear-gradient(180deg, #e0f0ff 0%, #d4edfc 45%, #cde8fb 100%)
+          `,
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)",
+          backgroundSize: "40px 40px, 40px 40px",
+          maskImage: "radial-gradient(100% 70% at 50% 30%, rgba(0,0,0,1), rgba(0,0,0,0.05))",
+        }}
+      />
 
-        <h1 className="mt-6 text-balance text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-          Encontre a vaga certa com o poder da{" "}
-          <span className="text-sky-500">IA</span>
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
+        <div className="mb-5 flex items-center justify-center gap-2">
+          <span className="rounded-full border bg-white/70 px-2.5 py-1 text-xs font-medium shadow-sm">Novo</span>
+          <span className="rounded-full border bg-white/70 px-3 py-1 text-xs text-muted-foreground shadow-sm">
+            Análise de vagas com IA
+          </span>
+        </div>
+
+        <h1 className="text-balance text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+          Encontre a vaga certa com o Vaga+
         </h1>
 
-        <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-          Analise vagas, compare com seu perfil e receba um score de
-          compatibilidade. Chega de se candidatar no escuro — deixe a IA
-          trabalhar por você.
+        <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Analise vagas, compare com seu perfil e receba um score de compatibilidade. Tudo com inteligência artificial.
         </p>
 
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <Link
-            href="/cadastro"
+        <div className="mt-7 flex items-center justify-center gap-3">
+          <Button
+            asChild
             className={cn(
-              "inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-all",
-              "bg-neutral-900 hover:bg-neutral-800 text-white shadow-md",
+              "rounded-full px-5 py-5 sm:py-6 text-sm sm:text-base",
+              "bg-neutral-900 hover:bg-neutral-800 text-white shadow",
               "shadow-[inset_0_1px_0_rgba(255,255,255,.15)]",
-              "hover:-translate-y-0.5",
             )}
           >
-            Começar agora
-          </Link>
-          <Link
-            href="#features"
-            className={cn(
-              "inline-flex h-11 items-center justify-center rounded-full border px-6 text-sm font-medium transition-all",
-              "border-sky-200/60 bg-white/80 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-300",
-            )}
-          >
-            Ver funcionalidades
-          </Link>
+            <Link href="/cadastro">Começar agora</Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full border-foreground/10 bg-white/80 backdrop-blur">
+            <Link href="#how-it-works" aria-label="Veja como o Vaga+ funciona">
+              Como funciona
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
   )
 }
+
+export default Hero
