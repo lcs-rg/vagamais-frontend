@@ -1,11 +1,11 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
+import { Button } from "@/shared/ui/button"
+import { Input } from "@/shared/ui/input"
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/shared/ui/dialog"
+import { Badge } from "@/shared/ui/badge"
+import { cn } from "@/shared/lib/utils"
 import { toast } from "sonner"
 import {
   Plus,

@@ -2,8 +2,8 @@
 
 import { useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { useAuth } from "@/hooks/use-auth"
-import { AppNavbar } from "@/components/vagamais/app-navbar"
+import { useAuth } from "@/features/auth/hooks/use-auth"
+import { AppNavbar } from "@/features/layout/components/app-navbar"
 import { Loader2 } from "lucide-react"
 
 export default function AppLayout({

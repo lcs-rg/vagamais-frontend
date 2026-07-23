@@ -1,9 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/shared/ui/button"
 import { ArrowRight } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/shared/lib/utils"
 
 export function Navbar() {
   return (

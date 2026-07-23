@@ -1,9 +1,9 @@
-import { Navbar } from "@/components/vagamais/navbar"
-import { Hero } from "@/components/vagamais/hero"
-import { DashboardPreview } from "@/components/vagamais/dashboard-preview"
-import FeaturesSection from "@/components/vagamais/features"
-import HowItWorksSection from "@/components/vagamais/how-it-works"
-import PricingSection from "@/components/vagamais/pricing"
+import { Navbar } from "@/features/layout/components/navbar"
+import { Hero } from "@/features/landing/components/hero"
+import { DashboardPreview } from "@/features/landing/components/dashboard-preview"
+import FeaturesSection from "@/features/landing/components/features"
+import HowItWorksSection from "@/features/landing/components/how-it-works"
+import PricingSection from "@/features/landing/components/pricing"
 
 export default function HomePage() {
   return (

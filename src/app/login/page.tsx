@@ -3,12 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { cn } from "@/lib/utils"
-import { login } from "@/lib/auth"
-import { getGoogleAuthUrl, getGithubAuthUrl } from "@/lib/auth"
+import { Button } from "@/shared/ui/button"
+import { Input } from "@/shared/ui/input"
+import { Label } from "@/shared/ui/label"
+import { cn } from "@/shared/lib/utils"
+import { login } from "@/features/auth/services/auth.service"
+import { getGoogleAuthUrl, getGithubAuthUrl } from "@/features/auth/services/auth.service"
 
 export default function LoginPage() {
   const router = useRouter()

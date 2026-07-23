@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from "react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
-import { confirmEmail } from "@/lib/auth"
+import { confirmEmail } from "@/features/auth/services/auth.service"
 import { Loader2, CheckCircle2, XCircle } from "lucide-react"
 
 function ConfirmarEmailContent() {

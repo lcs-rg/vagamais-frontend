@@ -2,7 +2,7 @@ import {
   AuthResponse,
   LoginRequest,
   RegisterRequest,
-} from "@/types/auth"
+} from "@/features/auth/types/auth.types"
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api"
 const AUTH_URL = `${API_URL}/auth`

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { VagaMaisLogo } from "./logo"
+import { VagaMaisLogo } from "@/shared/ui/logo"
 
 export function Footer() {
   return (

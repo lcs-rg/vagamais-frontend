@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
-import { useAuth } from "@/hooks/use-auth"
-import { VagaMaisLogo } from "@/components/vagamais/logo"
-import { cn } from "@/lib/utils"
+import { useAuth } from "@/features/auth/hooks/use-auth"
+import { VagaMaisLogo } from "@/shared/ui/logo"
+import { cn } from "@/shared/lib/utils"
 import { LayoutDashboard } from "lucide-react"
 
 export function AppNavbar() {

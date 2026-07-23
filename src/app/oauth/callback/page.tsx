@@ -2,7 +2,7 @@
 
 import { useEffect, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { useAuth } from "@/hooks/use-auth"
+import { useAuth } from "@/features/auth/hooks/use-auth"
 import { Loader2 } from "lucide-react"
 
 function OAuthCallbackContent() {

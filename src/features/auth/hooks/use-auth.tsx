@@ -7,13 +7,13 @@ import {
   useCallback,
   type ReactNode,
 } from "react"
-import type { User } from "@/types/auth"
+import type { User } from "@/features/auth/types/auth.types"
 import {
   getStoredUser,
   isAuthenticated,
   logout as authLogout,
   storeAuthResponse,
-} from "@/lib/auth"
+} from "@/features/auth/services/auth.service"
 
 interface AuthContextType {
   user: User | null

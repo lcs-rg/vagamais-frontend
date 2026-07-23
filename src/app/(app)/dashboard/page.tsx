@@ -1,7 +1,7 @@
 "use client"
 
-import { useAuth } from "@/hooks/use-auth"
-import { cn } from "@/lib/utils"
+import { useAuth } from "@/features/auth/hooks/use-auth"
+import { cn } from "@/shared/lib/utils"
 import { Sparkles, ArrowRight } from "lucide-react"
 
 export default function DashboardPage() {

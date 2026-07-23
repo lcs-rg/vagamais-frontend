@@ -3,12 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { cn } from "@/lib/utils"
-import { register } from "@/lib/auth"
-import type { RegisterRequest } from "@/types/auth"
+import { Button } from "@/shared/ui/button"
+import { Input } from "@/shared/ui/input"
+import { Label } from "@/shared/ui/label"
+import { cn } from "@/shared/lib/utils"
+import { register } from "@/features/auth/services/auth.service"
+import type { RegisterRequest } from "@/features/auth/types/auth.types"
 
 export default function RegisterPage() {
   const router = useRouter()
